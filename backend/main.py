@@ -298,6 +298,12 @@ def health_check():
     return jsonify({"status": "healthy", "timestamp": datetime.now().isoformat()})
 
 
+@app.route("/")
+def home():
+    """Home route for backend availability check"""
+    return "Backend is running successfully"
+
+
 # Serve React app for all other routes
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
