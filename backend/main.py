@@ -303,12 +303,6 @@ def test():
     return {"message": "API working"}
 
 
-@app.route("/")
-def home():
-    """Home route for backend availability check"""
-    return "Backend is running successfully"
-
-
 # Serve React app for all other routes
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")

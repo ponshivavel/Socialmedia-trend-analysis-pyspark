@@ -1,9 +1,17 @@
-# TODO Steps for Running the Dashboard
+# Social Media Trend Analysis - Deployment Fix TODO
 
-- [x] Install Python dependencies (pip install -r requirements.txt)
-- [x] Start backend server (python backend/main.py on port 10000)
-- [x] Start frontend dev server (npm start on port 3000)
-- [x] Fix frontend API URLs in Dashboard.js to point to localhost:10000/api/*
-- [x] Test all charts load (popularity bar, sentiment scatter, temporal line, geo map)
-- [x] Verify news panel on click works
-- [x] Refresh browser at http://localhost:3000
+## Completed
+- [x] Create TODO.md with task steps
+
+## Completed
+- [x] Create TODO.md with task steps
+- [x] Edit backend/main.py to remove conflicting home route
+
+## Completed
+- [x] Create TODO.md with task steps
+- [x] Edit backend/main.py to remove conflicting home route
+- [x] Test local backend: Backend running at http://localhost:10000/ serving React dashboard
+
+## Next Steps
+- [ ] Redeploy to Render using deploy.bat or manual process (run `deploy.bat` in new terminal)
+- [ ] Confirm production URL serves React dashboard properly
