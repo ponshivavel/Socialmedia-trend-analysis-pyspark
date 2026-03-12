@@ -30,19 +30,19 @@ const Dashboard = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const popularityUrl = selectedRegion
-        ? `http://localhost:8000/trends/popularity?region=${encodeURIComponent(selectedRegion)}`
-        : 'http://localhost:8000/trends/popularity';
+const popularityUrl = selectedRegion
+        ? `http://localhost:10000/api/trends/popularity?region=${encodeURIComponent(selectedRegion)}`
+        : 'http://localhost:10000/api/trends/popularity';
 
-      const sentimentUrl = selectedRegion
-        ? `http://localhost:8000/trends/sentiment?region=${encodeURIComponent(selectedRegion)}`
-        : 'http://localhost:8000/trends/sentiment';
+const sentimentUrl = selectedRegion
+        ? `http://localhost:10000/api/trends/sentiment?region=${encodeURIComponent(selectedRegion)}`
+        : 'http://localhost:10000/api/trends/sentiment';
 
-      const temporalUrl = selectedRegion
-        ? `http://localhost:8000/trends/temporal?region=${encodeURIComponent(selectedRegion)}`
-        : 'http://localhost:8000/trends/temporal';
+const temporalUrl = selectedRegion
+        ? `http://localhost:10000/api/trends/temporal?region=${encodeURIComponent(selectedRegion)}`
+        : 'http://localhost:10000/api/trends/temporal';
 
-      const geographicalUrl = 'http://localhost:8000/trends/geographical';
+const geographicalUrl = 'http://localhost:10000/api/trends/geographical';
 
       const [popularityRes, sentimentRes, temporalRes, geographicalRes] = await Promise.all([
         axios.get(popularityUrl),
@@ -65,7 +65,7 @@ const Dashboard = () => {
   const fetchNews = async (keyword) => {
     setNewsLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8000/news?q=${encodeURIComponent(keyword)}`);
+const response = await axios.get(`http://localhost:10000/api/news?q=${encodeURIComponent(keyword)}`);
       setNewsData(response.data.articles || []);
     } catch (error) {
       console.error('Error fetching news:', error);
