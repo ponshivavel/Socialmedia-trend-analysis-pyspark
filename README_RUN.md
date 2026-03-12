@@ -41,10 +41,5 @@ Open your browser at: http://localhost:3000
 - Use the dropdown to filter data by region
 
 ## API Endpoints:
-- http://localhost:8000/trends/popularity - Get trend popularity data
-- http://localhost:8000/trends/sentiment - Get sentiment data
-- http://localhost:8000/trends/temporal - Get temporal trends
-- http://localhost:8000/trends/geographical - Get geographical data
-- http://localhost:8000/news?q=keyword - Get news by keyword
-- http://localhost:8000/health - Health check
+http://localhost:10000/trends/popularity - Get trend popularity data\n- http://localhost:10000/trends/sentiment - Get sentiment data\n- http://localhost:10000/trends/temporal - Get temporal trends\n- http://localhost:10000/trends/geographical - Get geographical data\n- http://localhost:10000/news?q=keyword - Get news by keyword\n- http://localhost:10000/health - Health check
 

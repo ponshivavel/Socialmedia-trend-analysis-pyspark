@@ -1,24 +1,20 @@
-# Social Media Trend Analysis - Deployment Fix TODO
+# Social Media Trend Analysis - Frontend/Backend Fix Progress
 
-## Completed
-- [x] Create TODO.md with task steps
+## ✅ COMPLETED
+- [x] Analyzed files (Dashboard.js, main.py, package.json, etc.)
+- [x] Identified proxy mismatch (8000 → 10000)
+- [x] Confirmed CORS enabled, relative API paths correct
 
-## Completed
-- [x] Create TODO.md with task steps
-- [x] Edit backend/main.py to remove conflicting home route
+## 🔄 IN PROGRESS - Step 1/7
 
-## Completed
-- [x] Create TODO.md with task steps
-- [x] Edit backend/main.py to remove conflicting home route
-- [x] Test local backend: Backend running at http://localhost:10000/ serving React dashboard
+### 1. [ ] Fix package.json proxy (8000 → 10000)
+### 2. [ ] Update README_RUN.md instructions  
+### 3. [ ] Test: `npm start` + `python backend/main.py`
+### 4. [ ] Verify production build: `npm run build`
+### 5. [ ] Create deploy_instructions.md (Render)
+### 6. [ ] Test standalone: `python backend/main.py` → full dashboard
+### 7. [ ] Complete: Local + Deployed working
 
-## Completed
-- [x] Create TODO.md with task steps
-- [x] Edit backend/main.py to remove conflicting home route
-- [x] Test local backend: Backend running at http://localhost:10000/ serving React dashboard
-- [x] Deployed changes to GitHub (run deploy.bat - pushed to main)
+**Expected Result:** Frontend charts/news load from backend APIs seamlessly.
 
-## Next Steps (Manual on Render)
-- [ ] Trigger new Render deployment from latest GitHub commit
-- [ ] Confirm production URL serves React dashboard (no "Backend is running successfully" text)
-
+**Deploy Command:** `python backend/main.py` (port 10000)
