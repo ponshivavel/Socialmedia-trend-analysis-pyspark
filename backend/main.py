@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 # Load .env from backend directory
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
-app = Flask(__name__, static_folder="../build", static_url_path="/")
+app = Flask(__name__, static_folder="static", static_url_path="")
 
 # Enable CORS
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -298,6 +298,11 @@ def health_check():
     return jsonify({"status": "healthy", "timestamp": datetime.now().isoformat()})
 
 
+@app.route("/api/test")
+def test():
+    return {"message": "API working"}
+
+
 @app.route("/")
 def home():
     """Home route for backend availability check"""
@@ -311,7 +316,8 @@ def serve(path):
     """Serve React app"""
     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
         return send_from_directory(app.static_folder, path)
-    return send_from_directory(app.static_folder, "index.html")
+    else:
+        return send_from_directory(app.static_folder, "index.html")
 
 
 if __name__ == "__main__":
