@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import Plot from 'react-plotly.js';
@@ -9,6 +10,9 @@ const Dashboard = () => {
   const [geographicalData, setGeographicalData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedRegion, setSelectedRegion] = useState('');
+  const [selectedTrend, setSelectedTrend] = useState(null);
+  const [newsData, setNewsData] = useState([]);
+  const [newsLoading, setNewsLoading] = useState(false);
 
   const regions = [
     { value: '', label: 'All Regions' },
@@ -58,6 +62,56 @@ const Dashboard = () => {
     }
   }, [selectedRegion]);
 
+  const fetchNews = async (keyword) => {
+    setNewsLoading(true);
+    try {
+      const response = await axios.get(`http://localhost:8000/news?q=${encodeURIComponent(keyword)}`);
+      setNewsData(response.data.articles || []);
+    } catch (error) {
+      console.error('Error fetching news:', error);
+      setNewsData([]);
+    } finally {
+      setNewsLoading(false);
+    }
+  };
+
+  const handleBarClick = (event) => {
+    if (!event.points || !event.points[0]) return;
+    
+    const clickedTrend = event.points[0].x;
+    
+    if (selectedTrend === clickedTrend) {
+      // Close news panel if same trend clicked
+      setSelectedTrend(null);
+      setNewsData([]);
+    } else {
+      // Open news panel for new trend
+      setSelectedTrend(clickedTrend);
+      fetchNews(clickedTrend);
+    }
+  };
+
+  const handleSentimentClick = (event) => {
+    if (!event.points || !event.points[0]) return;
+    
+    const clickedTrend = event.points[0].x;
+    
+    if (selectedTrend === clickedTrend) {
+      // Close news panel if same trend clicked
+      setSelectedTrend(null);
+      setNewsData([]);
+    } else {
+      // Open news panel for new trend
+      setSelectedTrend(clickedTrend);
+      fetchNews(clickedTrend);
+    }
+  };
+
+  const closeNewsPanel = () => {
+    setSelectedTrend(null);
+    setNewsData([]);
+  };
+
   useEffect(() => {
     fetchData();
   }, [selectedRegion, fetchData]);
@@ -65,6 +119,9 @@ const Dashboard = () => {
   if (loading) {
     return <div className="dashboard">Loading...</div>;
   }
+
+  // Prepare sentiment colors - red for negative, blue for positive
+  const sentimentColors = sentimentData.map(d => d.sentiment < 0 ? 'rgb(220,53,69)' : 'rgb(0,123,255)');
 
   return (
     <div className="dashboard">
@@ -93,14 +150,21 @@ const Dashboard = () => {
               type: 'bar',
               x: popularityData.map(d => d.trend),
               y: popularityData.map(d => d.mentions),
-              name: 'Mentions'
+              name: 'Mentions',
+              marker: {
+                color: popularityData.map(d => 
+                  selectedTrend === d.trend ? '#ffc107' : 'rgb(54, 162, 235)'
+                )
+              }
             }
           ]}
           layout={{
-            title: 'Top Trending Topics',
+            title: 'Top Trending Topics (Click to see news)',
             xaxis: { title: 'Trend' },
-            yaxis: { title: 'Mentions' }
+            yaxis: { title: 'Mentions' },
+            clickmode: 'event+select'
           }}
+          onClick={handleBarClick}
         />
       </div>
 
@@ -113,14 +177,24 @@ const Dashboard = () => {
               mode: 'markers',
               x: sentimentData.map(d => d.trend),
               y: sentimentData.map(d => d.sentiment),
-              name: 'Sentiment Score'
+              name: 'Sentiment Score',
+              marker: {
+                size: 12,
+                color: sentimentColors,
+                line: {
+                  color: 'white',
+                  width: 1
+                }
+              }
             }
           ]}
           layout={{
-            title: 'Sentiment Distribution',
-            xaxis: { title: 'Trend' },
-            yaxis: { title: 'Sentiment (-1 to 1)' }
+            title: 'Sentiment Distribution (Red = Negative, Blue = Positive, Click to see news)',
+            xaxis: { title: 'Trend', tickangle: -45 },
+            yaxis: { title: 'Sentiment (-1 to 1)' },
+            clickmode: 'event+select'
           }}
+          onClick={handleSentimentClick}
         />
       </div>
 
@@ -205,8 +279,52 @@ const Dashboard = () => {
           }}
         />
       </div>
+
+      {/* News Panel Modal */}
+      {selectedTrend && (
+        <div className="news-modal-overlay" onClick={closeNewsPanel}>
+          <div className="news-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="news-modal-header">
+              <h2>News for: {selectedTrend}</h2>
+              <button className="close-btn" onClick={closeNewsPanel}>&times;</button>
+            </div>
+            <div className="news-modal-content">
+              {newsLoading ? (
+                <div className="news-loading">Loading news...</div>
+              ) : newsData.length > 0 ? (
+                <div className="news-list">
+                  {newsData.map((article, index) => (
+                    <div key={index} className="news-item">
+                      {article.urlToImage && (
+                        <img 
+                          src={article.urlToImage} 
+                          alt={article.title} 
+                          className="news-image"
+                          onError={(e) => e.target.style.display = 'none'}
+                        />
+                      )}
+                      <h3>{article.title}</h3>
+                      <p className="news-description">{article.description}</p>
+                      <div className="news-meta">
+                        <span>{article.source}</span>
+                        <span>{article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : ''}</span>
+                      </div>
+                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="read-more">
+                        Read Full Article
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="no-news">No news found for this trend.</div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Dashboard;
+

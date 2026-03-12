@@ -1,118 +1,108 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from datetime import datetime
-from typing import List
+from flask import Flask, jsonify, send_from_directory, request
+from flask_cors import CORS
 import os
 import json
 import glob
+from datetime import datetime
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load .env from backend directory
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
-app = FastAPI(title="Trend Analysis API", version="1.0.0")
+app = Flask(__name__, static_folder="../build", static_url_path="/")
 
-# CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],  # React dev server
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Enable CORS
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-# Models
-class TrendData(BaseModel):
-    platform: str
-    trend: str
-    mentions: int
-    avg_volume: float
-    max_volume: float
+# Helper function to get latest data file
+def get_latest_data_file():
+    """Get the latest data file, preferring latest.json"""
+    latest_file = "data/processed_data_latest.json"
+    if os.path.exists(latest_file):
+        return latest_file
+    processed_files = glob.glob("data/processed_data_*.json")
+    if not processed_files:
+        return None
+    return max(processed_files)
 
-class SentimentData(BaseModel):
-    platform: str
-    trend: str
-    sentiment: float
 
-@app.get("/trends/popularity", response_model=List[TrendData])
-async def get_popularity_trends(region: str = None):
+@app.route("/api/trends/popularity")
+def get_popularity_trends():
     """Get trend popularity data, optionally filtered by region"""
     try:
-       
-        processed_files = glob.glob("data/processed_data_*.json")
-        if not processed_files:
-            return []
-
-        latest_file = max(processed_files)
+        region = request.args.get('region')
+        latest_file = get_latest_data_file()
+        if not latest_file:
+            return jsonify([])
+        
         with open(latest_file, 'r') as f:
             data = json.load(f)
 
         popularity_data = data.get("popularity", [])
 
         if region:
-            # Filter data by region if specified
             popularity_data = [item for item in popularity_data if item.get('region') == region]
 
-        return [TrendData(**item) for item in popularity_data]
+        return jsonify(popularity_data)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error fetching data: {str(e)}")
+        return jsonify({"error": f"Error fetching data: {str(e)}"}), 500
 
-@app.get("/trends/sentiment")
-async def get_sentiment_trends(region: str = None):
+
+@app.route("/api/trends/sentiment")
+def get_sentiment_trends():
     """Get sentiment analysis data, optionally filtered by region"""
     try:
-        processed_files = glob.glob("data/processed_data_*.json")
-        if not processed_files:
-            return []
-
-        latest_file = max(processed_files)
+        region = request.args.get('region')
+        latest_file = get_latest_data_file()
+        if not latest_file:
+            return jsonify([])
+        
         with open(latest_file, 'r') as f:
             data = json.load(f)
 
         sentiment_data = data.get("sentiment", [])
 
         if region:
-            # Filter data by region if specified
             sentiment_data = [item for item in sentiment_data if item.get('region') == region]
 
-        return sentiment_data
+        return jsonify(sentiment_data)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error fetching data: {str(e)}")
+        return jsonify({"error": f"Error fetching data: {str(e)}"}), 500
 
-@app.get("/trends/temporal")
-async def get_temporal_trends(region: str = None):
+
+@app.route("/api/trends/temporal")
+def get_temporal_trends():
     """Get temporal trend patterns, optionally filtered by region"""
     try:
-        processed_files = glob.glob("data/processed_data_*.json")
-        if not processed_files:
-            return []
+        region = request.args.get('region')
+        latest_file = get_latest_data_file()
+        if not latest_file:
+            return jsonify([])
 
-        latest_file = max(processed_files)
         with open(latest_file, 'r') as f:
             data = json.load(f)
 
         temporal_data = data.get("temporal", [])
 
         if region:
-            # Filter data by region if specified
             temporal_data = [item for item in temporal_data if item.get('region') == region]
 
-        return temporal_data
+        return jsonify(temporal_data)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error fetching data: {str(e)}")
+        return jsonify({"error": f"Error fetching data: {str(e)}"}), 500
 
-@app.get("/trends/geographical")
-async def get_geographical_trends():
+
+@app.route("/api/trends/geographical")
+def get_geographical_trends():
     """Get geographical trend data with sentiment by region"""
     try:
-        processed_files = glob.glob("data/processed_data_*.json")
-        if not processed_files:
-            return []
+        latest_file = get_latest_data_file()
+        if not latest_file:
+            return jsonify([])
 
-        latest_file = max(processed_files)
         with open(latest_file, 'r') as f:
             data = json.load(f)
-
+     
         sentiment_data = data.get("sentiment", [])
 
         # Aggregate sentiment by region
@@ -162,7 +152,6 @@ async def get_geographical_trends():
         for region, values in region_sentiment.items():
             avg_sentiment = values['total_sentiment'] / values['count'] if values['count'] > 0 else 0
 
-            # Check if it's a specific city/location or country
             if region in location_coords:
                 coords = location_coords[region]
                 geographical_data.append({
@@ -174,7 +163,6 @@ async def get_geographical_trends():
                     'type': 'city'
                 })
             else:
-                # Country-level data
                 country_code = country_codes.get(region, '')
                 geographical_data.append({
                     'region': region,
@@ -184,11 +172,142 @@ async def get_geographical_trends():
                     'type': 'country'
                 })
 
-        return geographical_data
+        return jsonify(geographical_data)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error fetching data: {str(e)}")
+        return jsonify({"error": f"Error fetching data: {str(e)}"}), 500
 
-@app.get("/health")
-async def health_check():
+
+# Helper function to get sample news when API is rate limited
+def get_sample_news(keyword):
+    """Return sample news articles when API is rate limited"""
+    if not keyword:
+        keyword = "trending"
+    
+    sample_articles = [
+        {
+            "title": f"Latest developments in {keyword} - Analysis and Updates",
+            "description": f"Comprehensive coverage of {keyword} with expert analysis and latest updates from around the world.",
+            "url": f"https://example.com/news/{keyword.lower()}-1",
+            "urlToImage": None,
+            "publishedAt": datetime.now().isoformat(),
+            "source": "Sample News"
+        },
+        {
+            "title": f"{keyword} Impact on Global Markets",
+            "description": f"How {keyword} is affecting markets and what experts predict for the future.",
+            "url": f"https://example.com/news/{keyword.lower()}-2",
+            "urlToImage": None,
+            "publishedAt": datetime.now().isoformat(),
+            "source": "Sample News"
+        },
+        {
+            "title": f"Breaking: {keyword} Updates and Analysis",
+            "description": f"Latest breaking news and analysis on {keyword} from our correspondents worldwide.",
+            "url": f"https://example.com/news/{keyword.lower()}-3",
+            "urlToImage": None,
+            "publishedAt": datetime.now().isoformat(),
+            "source": "Sample News"
+        },
+        {
+            "title": f"What experts say about {keyword}",
+            "description": f"Expert opinions and analysis on {keyword} and its implications.",
+            "url": f"https://example.com/news/{keyword.lower()}-4",
+            "urlToImage": None,
+            "publishedAt": datetime.now().isoformat(),
+            "source": "Sample News"
+        }
+    ]
+    return sample_articles
+
+
+@app.route("/api/news")
+def get_news():
+    """Get news articles, optionally filtered by query and region"""
+    try:
+        import requests
+        
+        q = request.args.get('q')
+        region = request.args.get('region')
+        
+        # Use top-headlines endpoint which has higher rate limits
+        url = "https://newsapi.org/v2/top-headlines"
+        params = {
+            'apiKey': os.getenv("NEWS_API_KEY"),
+            'pageSize': 20,
+            'language': 'en'
+        }
+        
+        # Use query if provided, otherwise get general top headlines
+        if q:
+            params['q'] = q
+        elif region and region not in ['Worldwide', '']:
+            # Map region to country code for top-headlines
+            country_map = {
+                'United States': 'us', 'United Kingdom': 'gb', 'India': 'in',
+                'Canada': 'ca', 'Australia': 'au', 'Germany': 'de',
+                'France': 'fr', 'Japan': 'jp', 'South Korea': 'kr', 'Brazil': 'br'
+            }
+            country_code = country_map.get(region)
+            if country_code:
+                params['country'] = country_code
+            else:
+                params['country'] = 'us'
+        else:
+            params['country'] = 'us'  # Default to US
+        
+        response = requests.get(url, params=params, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+        
+        articles = data.get('articles', [])
+        
+        # If no articles from API (rate limited), return sample data
+        if not articles:
+            return jsonify({
+                "totalResults": 0,
+                "articles": get_sample_news(q or "trending"),
+                "note": "API rate limited, showing sample news"
+            })
+        
+        return jsonify({
+            "totalResults": data.get('totalResults', 0),
+            "articles": [
+                {
+                    "title": article.get('title'),
+                    "description": article.get('description'),
+                    "url": article.get('url'),
+                    "urlToImage": article.get('urlToImage'),
+                    "publishedAt": article.get('publishedAt'),
+                    "source": article.get('source', {}).get('name')
+                }
+                for article in articles if article.get('title') and article.get('title') != '[Removed]'
+            ]
+        })
+    except Exception as e:
+        # Return sample news on error
+        return jsonify({
+            "totalResults": 0,
+            "articles": get_sample_news(q or "trending"),
+            "error": str(e)
+        })
+
+
+@app.route("/api/health")
+def health_check():
     """Health check endpoint"""
-    return {"status": "healthy", "timestamp": datetime.now().isoformat()}
+    return jsonify({"status": "healthy", "timestamp": datetime.now().isoformat()})
+
+
+# Serve React app for all other routes
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve(path):
+    """Serve React app"""
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    return send_from_directory(app.static_folder, "index.html")
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000, debug=True)
+
