@@ -1,0 +1,1801 @@
+{
+  "popularity": [
+    {
+      "platform": "NewsAPI",
+      "trend": "The",
+      "mentions": 18,
+      "avg_volume": 27.0,
+      "max_volume": 45.0,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Trump",
+      "mentions": 10,
+      "avg_volume": 15.0,
+      "max_volume": 25.0,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Washington",
+      "mentions": 7,
+      "avg_volume": 10.5,
+      "max_volume": 17.5,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Iran",
+      "mentions": 7,
+      "avg_volume": 10.5,
+      "max_volume": 17.5,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "President",
+      "mentions": 5,
+      "avg_volume": 7.5,
+      "max_volume": 12.5,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Post",
+      "mentions": 5,
+      "avg_volume": 7.5,
+      "max_volume": 12.5,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Tuesday",
+      "mentions": 4,
+      "avg_volume": 6.0,
+      "max_volume": 10.0,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "News",
+      "mentions": 4,
+      "avg_volume": 6.0,
+      "max_volume": 10.0,
+      "region": "United States"
+    }
+  ],
+  "sentiment": [
+    {
+      "platform": "NewsAPI",
+      "trend": "The",
+      "sentiment": -0.167,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Trump",
+      "sentiment": -0.067,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Washington",
+      "sentiment": -0.095,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Iran",
+      "sentiment": -0.238,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "President",
+      "sentiment": -0.333,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Post",
+      "sentiment": -0.2,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "Tuesday",
+      "sentiment": -0.5,
+      "region": "United States"
+    },
+    {
+      "platform": "NewsAPI",
+      "trend": "News",
+      "sentiment": -0.417,
+      "region": "United States"
+    }
+  ],
+  "temporal": [
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 0,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 1,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 2,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 3,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 4,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 5,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 6,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 7,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 8,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 9,
+      "volume": 210,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 10,
+      "volume": 224,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 11,
+      "volume": 238,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 12,
+      "volume": 252,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 13,
+      "volume": 266,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 14,
+      "volume": 280,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 15,
+      "volume": 294,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 16,
+      "volume": 308,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 17,
+      "volume": 322,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 18,
+      "volume": 336,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 19,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 20,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 21,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 22,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "The",
+      "hour": 23,
+      "volume": 70,
+      "mentions": 14
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 0,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 1,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 2,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 3,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 4,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 5,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 6,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 7,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 8,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 9,
+      "volume": 135,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 10,
+      "volume": 144,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 11,
+      "volume": 153,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 12,
+      "volume": 162,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 13,
+      "volume": 171,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 14,
+      "volume": 180,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 15,
+      "volume": 189,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 16,
+      "volume": 198,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 17,
+      "volume": 206,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 18,
+      "volume": 216,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 19,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 20,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 21,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 22,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Trump",
+      "hour": 23,
+      "volume": 45,
+      "mentions": 9
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 0,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 1,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 2,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 3,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 4,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 5,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 6,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 7,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 8,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 9,
+      "volume": 105,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 10,
+      "volume": 112,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 11,
+      "volume": 119,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 12,
+      "volume": 126,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 13,
+      "volume": 133,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 14,
+      "volume": 140,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 15,
+      "volume": 147,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 16,
+      "volume": 154,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 17,
+      "volume": 161,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 18,
+      "volume": 168,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 19,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 20,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 21,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 22,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Iran",
+      "hour": 23,
+      "volume": 35,
+      "mentions": 7
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 0,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 1,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 2,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 3,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 4,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 5,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 6,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 7,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 8,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 9,
+      "volume": 90,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 10,
+      "volume": 96,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 11,
+      "volume": 102,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 12,
+      "volume": 108,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 13,
+      "volume": 114,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 14,
+      "volume": 120,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 15,
+      "volume": 126,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 16,
+      "volume": 132,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 17,
+      "volume": 138,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 18,
+      "volume": 144,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 19,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 20,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 21,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 22,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Washington",
+      "hour": 23,
+      "volume": 30,
+      "mentions": 6
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 0,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 1,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 2,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 3,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 4,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 5,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 6,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 7,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 8,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 9,
+      "volume": 75,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 10,
+      "volume": 80,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 11,
+      "volume": 85,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 12,
+      "volume": 90,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 13,
+      "volume": 95,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 14,
+      "volume": 100,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 15,
+      "volume": 105,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 16,
+      "volume": 110,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 17,
+      "volume": 114,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 18,
+      "volume": 120,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 19,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 20,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 21,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 22,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "Post",
+      "hour": 23,
+      "volume": 25,
+      "mentions": 5
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 0,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 1,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 2,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 3,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 4,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 5,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 6,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 7,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 8,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 9,
+      "volume": 60,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 10,
+      "volume": 64,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 11,
+      "volume": 68,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 12,
+      "volume": 72,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 13,
+      "volume": 76,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 14,
+      "volume": 80,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 15,
+      "volume": 84,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 16,
+      "volume": 88,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 17,
+      "volume": 92,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 18,
+      "volume": 96,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 19,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 20,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 21,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 22,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "News",
+      "hour": 23,
+      "volume": 20,
+      "mentions": 4
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 0,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 1,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 2,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 3,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 4,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 5,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 6,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 7,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 8,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 9,
+      "volume": 45,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 10,
+      "volume": 48,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 11,
+      "volume": 51,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 12,
+      "volume": 54,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 13,
+      "volume": 57,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 14,
+      "volume": 60,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 15,
+      "volume": 63,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 16,
+      "volume": 66,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 17,
+      "volume": 69,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 18,
+      "volume": 72,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 19,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 20,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 21,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 22,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Tuesday",
+      "hour": 23,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 0,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 1,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 2,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 3,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 4,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 5,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 6,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 7,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 8,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 9,
+      "volume": 45,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 10,
+      "volume": 48,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 11,
+      "volume": 51,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 12,
+      "volume": 54,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 13,
+      "volume": 57,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 14,
+      "volume": 60,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 15,
+      "volume": 63,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 16,
+      "volume": 66,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 17,
+      "volume": 69,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 18,
+      "volume": 72,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 19,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 20,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 21,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 22,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Day",
+      "hour": 23,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 0,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 1,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 2,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 3,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 4,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 5,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 6,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 7,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 8,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 9,
+      "volume": 45,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 10,
+      "volume": 48,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 11,
+      "volume": 51,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 12,
+      "volume": 54,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 13,
+      "volume": 57,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 14,
+      "volume": 60,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 15,
+      "volume": 63,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 16,
+      "volume": 66,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 17,
+      "volume": 69,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 18,
+      "volume": 72,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 19,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 20,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 21,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 22,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Oil",
+      "hour": 23,
+      "volume": 15,
+      "mentions": 3
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 0,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 1,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 2,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 3,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 4,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 5,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 6,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 7,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 8,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 9,
+      "volume": 30,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 10,
+      "volume": 32,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 11,
+      "volume": 34,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 12,
+      "volume": 36,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 13,
+      "volume": 38,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 14,
+      "volume": 40,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 15,
+      "volume": 42,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 16,
+      "volume": 44,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 17,
+      "volume": 46,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 18,
+      "volume": 48,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 19,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 20,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 21,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 22,
+      "volume": 10,
+      "mentions": 2
+    },
+    {
+      "region": "United States",
+      "keyword": "Iranian",
+      "hour": 23,
+      "volume": 10,
+      "mentions": 2
+    }
+  ],
+  "fetched_at": "2026-03-11T20:25:03.421995"
+}
